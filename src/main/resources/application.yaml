@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+spring:
+  application:
+    name: Auth Service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: ashu
+    password: p@ssword
+    hikari:
+      auto-commit: false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+
