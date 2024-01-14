@@ -13,6 +13,8 @@ eureka:
 spring:
   application:
     name: Auth Service
+  kafka:
+    bootstrap-servers: localhost:9092
   datasource:
     url: jdbc:postgresql://localhost:5432/testdb
     username: ashu
